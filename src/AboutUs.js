@@ -8,7 +8,7 @@ function AboutUs() {
     return(
         <div>
             <NavigationBar/>
-            <div className="About_Us" id="about" style={{marginTop: '180px'}}>
+            <div className="About_Us" id="about" style={{marginTop: '200px'}}>
                     <div className="about-us">
                         <div className='about-us-text'>
                             <h1>About Us</h1>

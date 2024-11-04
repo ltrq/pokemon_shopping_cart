@@ -54,6 +54,7 @@ function Home() {
                 <h1> <b>CHECK OUT OUR INVENTORY</b></h1>
                 <StorePreviewList />
             </div>
+            <div style={{height: '0px', marginBottom: '-200px'}}></div>
             <AboutUs />
             <Footer />
         </div>
