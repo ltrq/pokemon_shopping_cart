@@ -1,0 +1,70 @@
+.StorePreviewBlock {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.StorePreviewBlock .Previous, .StorePreviewBlock .Next {
+    height: 700px; /* Adjusted height for arrow buttons */
+    width: 300px; /* Adjusted width for arrow buttons */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.2s; /* Smooth transition for hover effect */
+}
+
+.StorePreviewBlock .Previous:hover, .StorePreviewBlock .Next:hover {
+    background-color: #d1d1d1; /* Darker background on hover */
+}
+
+/* SVG Styling */
+.StorePreviewBlock svg {
+    width: 200px; /* Size of the SVG arrow */
+    height: 200px; /* Size of the SVG arrow */
+    fill: none; /* No fill for the arrows */
+    stroke: #fff; /* White color for the arrow stroke */
+    cursor: pointer; /* Pointer cursor for hover */
+}
+
+.StorePreviewList {
+    display: grid;
+    grid-template-columns: repeat(5, 350px); /* 5 columns, each 350px wide */
+    grid-template-rows: repeat(2, 350px); /* 2 rows, each 350px high */
+    gap: 24px; /* Space between items */
+    justify-content: center; /* Centers the grid within its container */
+    align-items: center; /* Centers grid items vertically within their cells */
+    justify-items: center; /* Centers grid items horizontally within their cells */
+}
+
+/* Style for each item */
+.StorePreview {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.Store_Previews h1 {
+    text-align: center;
+    font-size: 42px;
+    color: #222;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+/* Hover effect */
+.StorePreview:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}

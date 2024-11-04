@@ -1,0 +1,135 @@
+/* General Styles */
+.shop-item {
+    font-family: Arial, sans-serif;
+}
+
+.item-container {
+    padding: 20px;
+    max-width: 1500px;
+    max-height: 1500px;
+    margin: 100px auto 0;
+    margin-top: 220px;
+}
+
+.item-title {
+    font-size: 42px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+
+.item-image-container {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Price Styles */
+.item-price {
+    font-size: 40px;
+    color: #FF6347;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.item-price-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Type and Flavor Text Styles */
+.item-type,
+.item-flavor-text,
+.item-attributes {
+    margin-top: 10px;
+}
+
+.item-flavor-text {
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.item-type {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Image Styles */
+.item-image {
+    width: 550px;
+    height: 550px;
+    object-fit: contain;
+    transform-origin: center; /* Ensures rotation occurs around the center */
+}
+
+.item-id {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Attribute Styles */
+.item-attributes ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Type Icon Styles */
+.type-icon {
+    vertical-align: middle;
+    width: 10%;
+    height: 10%;
+}
+
+/* Shiny and Non-Shiny Animations */
+@keyframes rotateAndTranslateNonShiny {
+    0% { transform: rotate(0deg) translateX(0); }
+    20% { transform: rotate(-5deg) translateX(-5px); }
+    40% { transform: rotate(5deg) translateX(5px); }
+    60% { transform: rotate(-5deg) translateX(-5px); }
+    80% { transform: rotate(5deg) translateX(5px); }
+    100% { transform: rotate(0deg) translateX(0); }
+}
+
+@keyframes rotateAndTranslateShiny {
+    0% { transform: rotate(0deg) translateX(0) scaleX(-1); }
+    20% { transform: rotate(5deg) translateX(-5px) scaleX(-1); }
+    40% { transform: rotate(-5deg) translateX(5px) scaleX(-1); }
+    60% { transform: rotate(5deg) translateX(-5px) scaleX(-1); }
+    80% { transform: rotate(-5deg) translateX(5px) scaleX(-1); }
+    100% { transform: rotate(0deg) translateX(0) scaleX(-1); }
+}
+
+/* Animation Classes */
+.rotate-translate-shiny {
+    animation: rotateAndTranslateShiny 0.3s ease;
+}
+
+.rotate-translate-non-shiny {
+    animation: rotateAndTranslateNonShiny 0.3s ease;
+}
+
+/* Shiny Icon Styles */
+.isShiny {
+    margin-left: 450px; /* Adjust as needed */
+}
+
+.addToCart .checkoutIcon {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.addToCart:hover .checkoutIcon {
+    animation: cycleImages 1.2s infinite;
+}
+
+/* Keyframes to cycle through the images */
+@keyframes cycleImages {
+    0% { content: url('./assets/pokeball_Cart1.png'); }
+    33% { content: url('./assets/pokeball_Cart2.png'); }
+    66% { content: url('./assets/pokeball_Cart3.png'); }
+    100% { content: url('./assets/pokeball_Cart1.png'); }
+}

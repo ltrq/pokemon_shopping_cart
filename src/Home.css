@@ -1,0 +1,331 @@
+/* Home.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.HomePage {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+}
+
+.Navigation_Bar {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    color: white;
+    padding-left: 70px;
+    font-size: 20px;
+    z-index: 1000;
+    width: 100%;
+    min-height: 180px;
+}
+
+.Logo {
+    max-height: 120px;
+    transition: transform 0.6s ease;
+    border-radius: 20%;
+    padding: 5px;
+    object-fit: cover;
+}
+
+.Logo:hover {
+    transform: scale(1.2) rotate(360deg);
+}
+
+.NavLinks {
+    display: flex;
+    gap: 0;
+    height: 180px;
+}
+
+.NavLinks div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 220px;
+    transition: background-color 0.3s ease;
+}
+
+.NavLinks a {
+    color: white;
+    text-decoration: none;
+    font-size: 32px;
+    padding: 20px 30px;
+    display: block;
+    transition: color 0.3s ease, background-color 0.3s ease, font-size 0.3s ease;
+}
+
+.NavLinks a:hover {
+    color: #f4f4f4;
+    font-size: 38px;
+}
+
+.NavLinks div:hover {
+    background-color: #313030;
+}
+
+/* Individual Section Styling */
+.Content {
+    display: flex;
+    min-height: 60vh;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 180px;
+}
+
+.TextSection {
+    flex: 1;
+    padding-right: 20px;
+    max-width: 50%;
+    margin-right: 100px;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 32px;
+}
+.TextSection p {
+    margin-top: 50px;
+}
+.TextSection h2 {
+    font-size: 54px;
+    
+
+}
+
+.SlideshowSection {
+    position: relative;
+    width: 31%;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    margin: 20px 0;
+}
+
+.SlideshowWrapper {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+    width: 100%;
+}
+
+.SlideshowImage {
+    min-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.Store_Previews {
+    /* min-height: 60vh; */
+    padding: 50px 20px;
+    background-color: #ddd;
+    color: #333;
+    font-size: 18px;
+}
+
+/* About Us Section Styling */
+/* About Us Section Styling */
+.About_Us {
+    padding: 50px 20px;
+    background-color: #bbb;
+    color: #333;
+    font-size: 18px;
+}
+
+.About_Us h1 {
+    font-size: 42px; /* Increased font size for a more impactful heading */
+    color: #000; /* Darker color for the heading */
+    margin-bottom: 20px;
+    text-align: center; /* Centered the title for better balance */
+    text-transform: uppercase; /* Transformed to uppercase for emphasis */
+    letter-spacing: 2px; /* Added letter spacing for a more polished look */
+}
+
+.About_Us p {
+    font-size: 32px; /* Slightly larger font size for better readability */
+    line-height: 1.8; /* Increased line height for improved readability */
+    margin-bottom: 20px;
+    color: #333;
+    max-width: 1200px; /* Limited the width for better line length */
+    margin-left: auto; /* Centering paragraph */
+    margin-right: auto; /* Centering paragraph */
+    padding: 0 20px; /* Added padding for side spacing */
+}
+
+.about-us-text p{
+    text-align: justify;
+    max-width: fit-content;
+    padding: 50px 200px;
+}
+
+.team-section {
+    margin-top: 50px; /* Increased margin for better spacing */
+}
+
+.team-section h1 {
+    font-size: 42px; /* Larger font size for subheading */
+    color: #222;
+    margin-bottom: 20px;
+    text-align: center; /* Centering team section heading */
+    text-transform: uppercase; /* Transformed to uppercase for emphasis */
+}
+
+.team-members {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start; /* Changed alignment for better structure */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.member {
+    min-width: 200px;
+    max-width: 650px;
+    height: 1030px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.member img {
+    width: 450px; /* Set a fixed width */
+    height: 700px; /* Set a fixed height */
+    border-radius: 50%; /* Keep rounded */
+    margin-bottom: 15px;
+    object-fit: cover; /* Ensures the image fits the container while maintaining aspect ratio */
+    /* Removed hover effect */
+}
+
+.member h3 {
+    font-size: 40px; /* Increased font size for member names */
+    color: #000;
+    margin-bottom: 10px;
+    font-weight: bold; /* Make names stand out */
+}
+
+.member p {
+    font-size: 19px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+/* Mission Section Styling */
+.mission {
+    margin-top: 100px;
+    padding: 20px; /* Added padding for better structure */
+}
+
+.mission h2 {
+    font-size: 32px; /* Larger font size for mission heading */
+    color: #000;
+    margin-bottom: 20px;
+    text-align: center; /* Centered the mission heading */
+    text-transform: uppercase; /* Transformed to uppercase for emphasis */
+}
+
+.mission p {
+    font-size: 32px;
+    color: #333;
+    line-height: 1.6;
+    max-width: fit-content; /* Limited the width for better line length */
+    margin-left: auto; /* Centering paragraph */
+    margin-right: auto; /* Centering paragraph */
+    padding: 50px 200px; /* Added padding for side spacing */
+    padding-top: 10px;
+    text-align: justify;
+}
+
+
+/* Footer Section */
+.Footer {
+    /* min-height: 20vh; */
+    padding: 50px 20px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+}
+.Footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-right: 20px;
+}
+
+.footer-section h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section a {
+    color: #f4f4f4;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #ffcc00;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 18px;
+}
+
+
+.Cart_Item_Count {
+    display: inline-block;                 /* Allow margins and padding */
+    background-color: red;                 /* Red background for the dot */
+    color: white;                          /* White text color */
+    border-radius: 50%;                    /* Make it a circle */
+    width: 30px;                           /* Set a larger width */
+    height: 30px;                          /* Set a larger height */
+    text-align: center;                    /* Center the text */
+    line-height: 30px;                     /* Vertically center the text */
+    font-size: 16px;                       /* Increase font size for the count */
+    margin-left: 5px;                      /* Space between Cart and dot */
+}

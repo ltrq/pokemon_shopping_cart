@@ -1,0 +1,178 @@
+/* Main container for the store */
+.store-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 180px;
+}
+
+/* Content area */
+.content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+/* Main content area that takes up available space */
+.main-content {
+    flex: 1;
+    padding-right: 20px;
+    
+}
+
+/* Filter Bar Styling */
+.filter-bar {
+    width: 600px;
+    height: 470px;
+    background-color: #fa7373;
+    padding: 20px;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 10px;
+    position: fixed;
+    padding-top: 40px;
+}
+
+/* Styling for filter rows */
+.filter-bar-row {
+    display: flex;
+    flex-direction: row;
+    /* gap: 1800px; */
+    padding-left: 20px;
+}
+
+/* Styling for individual filter options */
+.filter-option {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Select element styles in the filter bar */
+.filter-bar select {
+    font-size: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #555;
+    cursor: pointer;
+}
+
+/* Input field styles in the filter bar */
+.filter-bar input {
+    font-size: 20px;
+    width: 250px;
+    height: 30px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #555;
+    cursor: pointer;
+}
+
+/* Styling for individual filter items */
+.filter-item {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+}
+
+/* Hover effect for filter items */
+.filter-item:hover {
+    background-color: #e0e0e0;
+    color: #222;
+}
+
+/* Active filter item styles */
+.filter-item.active {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/* Apply Filters Button Styling */
+.apply-filters-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 20px;
+    font-size: 1.05em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+/* Hover effect for apply filters button */
+.apply-filters-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Main content grid layout */
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+    margin-left: 680px;
+}
+
+/* Individual content item styling */
+.individual-content {
+    transition: transform 0.3s;
+}
+
+/* Hover effect for individual content items */
+.individual-content:hover {
+    transform: scale(1.1) rotateZ(-2deg) translateX(5px);
+}
+
+/* Additional spacing for type filters */
+.filter-type {
+    gap: 40px;
+}
+
+/* Styling for type filter containers */
+.type-filter {
+    width: 200px;
+    justify-content: space-between;
+}
+
+.pagination {
+    display: flex; 
+    justify-content: center; 
+    margin-top: 50px; /* Space above the pagination */
+}
+
+.pagination button {
+    margin: 0 5px; /* Margin around buttons */
+    padding: 10px; /* Padding inside buttons */
+    font-size: 20px; /* Font size for buttons */
+    width: 50px;
+    height: 50px;
+    font-weight: bolder;
+    cursor: pointer; /* Pointer cursor on hover */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #ff002b; /* Background color */
+    color: white; /* Text color */
+    transition: background-color 0.3s; /* Transition effect for background color */
+}
+
+.pagination button:hover {
+    background-color: #b30000; /* Darker shade on hover */
+}
+
+.pagination button:disabled {
+    background-color: #ccc; /* Grey color for disabled buttons */
+    cursor: not-allowed; /* Not allowed cursor */
+}
